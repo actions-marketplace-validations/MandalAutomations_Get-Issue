@@ -8114,7 +8114,7 @@ __nccwpck_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(_actions_github__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const token = "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"
+const token = "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"
 const octokit = (0,_actions_github__WEBPACK_IMPORTED_MODULE_0__.getOctokit)(token);
 const repoName = "ActionContainer"
 const ownerName = "evanallen13"
@@ -8126,10 +8126,17 @@ const getAllIssues = async () => {
     return octokit.request(url, {
         owner: ownerName,
         repo: repoName,
-        labels: "some-label"
+        labels: "response"
     })
 }
 
+const run = async () => {
+    console.log("Running");
+    const issues = await getAllIssues();
+    console.log(issues);
+}
+
+run();
 })();
 
 module.exports = __webpack_exports__;

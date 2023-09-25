@@ -1,0 +1,26 @@
+name: "Get Issue"
+author: "evanallen13"
+description: "This gets open issues by label"
+
+branding:
+  icon: 'play'
+  color: 'purple'
+
+inputs:
+
+  RepoName :
+    description: "This is the name of the repository"
+    required: true
+
+  OwnerName:
+    description: "This is the name of the owner of the repository"
+    required: true
+
+  Token:
+    description: "Pat Token"
+    required: true
+
+runs:
+  using: node20
+  main: 'dist/index.js'
+  
