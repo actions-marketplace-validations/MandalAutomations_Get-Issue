@@ -1,4 +1,5 @@
 import { context, getOctokit } from "@actions/github";
+import { getInput, setFailed } from "@actions/core";
 
 const token = getInput("Token");
 const repoName = getInput("RepoName");
