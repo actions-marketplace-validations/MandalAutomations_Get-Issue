@@ -8114,11 +8114,10 @@ __nccwpck_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(_actions_github__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const token = "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"
+const token = getInput("Token");
+const repoName = getInput("RepoName");
+const ownerName = getInput("OwnerName");
 const octokit = (0,_actions_github__WEBPACK_IMPORTED_MODULE_0__.getOctokit)(token);
-const repoName = "ActionContainer"
-const ownerName = "evanallen13"
-// const repoId = process.env.REPO_ID;
 
 const getAllIssues = async () => {
     let url = `GET /repos/${ownerName}/${repoName}/issues`
